@@ -12,3 +12,4 @@ I will create a new array set to the length of the input array plus one to get t
 Then I will iterate through the arrays using a for loop and a count variable to target the correct index in the newly created array.
 
 ## Solution
+![array shift whiteboard](https://github.com/trecain/Data-Structures-and-Algorithms/blob/array_shift/assets/arrayShift.jpg)
