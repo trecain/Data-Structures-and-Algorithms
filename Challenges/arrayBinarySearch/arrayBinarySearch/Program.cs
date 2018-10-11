@@ -2,15 +2,11 @@
 
 namespace arrayBinarySearch
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            //Invokes BinarySearch method.
-            int[] testArray = { 4, 8, 15, 16, 23, 42 };
-            int[] testArrayTwo = { 11, 22, 33, 44, 55, 66, 77 };
-            Console.WriteLine(BinarySearch(testArray, 15));
-            Console.WriteLine(BinarySearch(testArrayTwo, 15));
+            Console.WriteLine("Welcome to Binary Search.");  
         }
 
         public static int BinarySearch(int[] sortedArray, int searchKey)
