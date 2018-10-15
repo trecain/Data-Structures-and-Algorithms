@@ -9,7 +9,8 @@ namespace fibonacci
             Console.WriteLine("Welcome to the Fibonacci Sequence.");
         }
 
-        public static int FibonacciSequence(int num)
+        //Fibonacci sequence iterative
+        public static int FibonacciSequenceInterative(int num)
         {
             int result = 1, numOne = 0, numTwo = 1;
             if (num == 0)
@@ -30,6 +31,12 @@ namespace fibonacci
                 }
             }
             return numOne;
+        }
+
+        public static int FibonacciSequenceRecursive(int num)
+        {
+            if ((num == 0) || (num <= 2)) return 0;
+            return FibonacciSequenceInterative((num - 1) + (num - 2));
         }
     }
 }
