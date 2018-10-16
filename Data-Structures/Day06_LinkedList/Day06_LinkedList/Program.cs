@@ -3,9 +3,9 @@ using Day06_LinkedList.Classes;
 
 namespace Day06_LinkedList
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
 

@@ -34,6 +34,7 @@ namespace Day06_LinkedList.Classes
         /// <param name="node">the node that will be added</param>
         public void Add(Node node)
         {
+            Current = Head;
             node.Next = Head;
             Head = node;
             Current = Head;
@@ -47,7 +48,6 @@ namespace Day06_LinkedList.Classes
         public bool Print()
         {
             Current = Head;
-
             while (Current.Next != null)
             {
                 Console.Write($"{Current.Value} --> ");
@@ -130,9 +130,7 @@ namespace Day06_LinkedList.Classes
             {
                 Current.Next = newNode;
             }
-        }
-
-
+        }    
 
     }
 }
