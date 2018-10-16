@@ -1,15 +1,33 @@
-# Shift Array
+# Link List
 
 ## Challenge 
-Inputting an array of integers and single integer, return an array that sets the individual integer in the middle of the array.
+My implementation of a linked list.  The methods that are implemented are add, print, append, addbefore, and addafter. 
 
-## Approach and Efficiency
+## Space/Time
 
-- Time: O(n)
-- Space: O(n)
+## Add:
+	- Time: O(1)
+	- Space: O(1)
 
-I will create a new array set to the length of the input array plus one to get the correct amount of indices to shift the new integer to.
-Then I will iterate through the arrays using a for loop and a count variable to target the correct index in the newly created array.
+- Adds to the beginning of the linked list.
 
-## Solution
-![array shift whiteboard](https://github.com/trecain/Data-Structures-and-Algorithms/blob/array_shift/assets/arrayShift.jpg)
+## Print: 
+	- Time: O(n)
+	- Space: O(1)
+
+- Prints every node in the link list.
+
+## Append 
+	- Time: O(n)
+	- Space: O(1)
+- Appends a node to the linked list.
+
+## AddBefore
+	- Time: O(n)
+	- Space: O(1)
+- Adds a node before a selected value on the linked list.
+
+## AddAfter
+	- Time: O(n)
+	- Space: O(1)
+- Adds a node after a selected value on the linked list.
