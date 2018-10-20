@@ -16,4 +16,10 @@
     <ProjectReference Include="..\Day07_LinkedList_Kth\Day07_LinkedList_Kth.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="Day06_LinkedList">
+      <HintPath>..\..\..\Data-Structures\Day06_LinkedList\Day06_LinkedList\bin\Debug\netcoreapp2.1\Day06_LinkedList.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
