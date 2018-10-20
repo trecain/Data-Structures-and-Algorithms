@@ -12,4 +12,4 @@ Given an input and Linked List, return the value of of the node at the inputs po
 I will create a method that will have to search through the link list and return at the value inputed. 
 Meaning time will depend on how many nodes are in the Link List.  
 ## Solution
-![array shift whiteboard](https://github.com/trecain/Data-Structures-and-Algorithms/blob/array_shift/assets/arrayShift.jpg)
+![kth index whiteboard](https://github.com/trecain/Data-Structures-and-Algorithms/blob/master/assets/Image%20from%20iOS.jpg)
