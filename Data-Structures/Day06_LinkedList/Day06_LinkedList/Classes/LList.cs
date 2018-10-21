@@ -45,18 +45,20 @@ namespace Day06_LinkedList.Classes
         ///	time: O(n)
         ///	space: O(1)
         /// </summary>
-        public bool Print()
+        public string Print()
         {
             Current = Head;
+            string linkedListString = "";
             while (Current.Next != null)
             {
+                linkedListString += $"{Current.Value} --> ";
                 Console.Write($"{Current.Value} --> ");
                 Current = Current.Next;
             }
-
+            linkedListString += $"{Current.Value} --> NULL\n";
             Console.Write($"{Current.Value} --> NULL\n");
             Current = Head;
-            return true;
+            return linkedListString;
         }
 
 
