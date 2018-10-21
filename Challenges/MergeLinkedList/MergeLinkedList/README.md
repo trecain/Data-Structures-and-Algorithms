@@ -11,4 +11,4 @@ eg. input: 2, 4, 6, 11, 9, 5 output: "2 --> 4 --> 6 --> 11 --> 9 --> 5 --> NULL\
 - Space: O(1) - No new items are created so no new space is needed.  Giving us a space of O(1).
 
 ## Solution
-![Linked List Zipper whiteboard](https://github.com/trecain/Data-Structures-and-Algorithms/blob/array_shift/assets/arrayShift.jpg)
+![Linked List Zipper whiteboard](https://github.com/trecain/Data-Structures-and-Algorithms/blob/master/assets/wb08.jpg)
