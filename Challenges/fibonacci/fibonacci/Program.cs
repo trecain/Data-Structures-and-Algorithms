@@ -35,8 +35,12 @@ namespace fibonacci
 
         public static int FibonacciSequenceRecursive(int num)
         {
-            if ((num == 0) || (num <= 2)) return 0;
-            return FibonacciSequenceInterative((num - 1) + (num - 2));
+            if (num == 0)
+                return num;
+            else if (num == 1)
+                return 1;
+            else
+                return FibonacciSequenceRecursive(num - 1) + FibonacciSequenceRecursive(num - 2);
         }
     }
 }
