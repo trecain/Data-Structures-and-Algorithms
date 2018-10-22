@@ -3,9 +3,9 @@ using Day06_LinkedList.Classes;
 
 namespace ReversedLL
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Console.WriteLine("Coding Challenge: Reversed Linked List");
 
@@ -20,9 +20,34 @@ namespace ReversedLL
             ///<summary>
             /// Show the linked list before the reversal and one after.
             /// </summary>
-            Console.WriteLine($"Initial Linked List Order: {linkedList.Print()}");
+            Console.WriteLine($"Pre Linked List Order:");
+            linkedList.Print();
+
+            Console.WriteLine($"Post Linked List Order:");
+            LList reversedLinkedList = ReverseLL(linkedList);
+            reversedLinkedList.Print();
+        }
 
 
+        /// <summary>
+        /// setting the current and last node pointers in order to reverse the order of the linked list
+        /// </summary>
+        /// <param name="linkedList"></param>
+        /// <returns></returns>
+        public static LList ReverseLL( LList linkedList)
+        {
+            Node lastNode = null;
+            Node currentNode = linkedList.Head;
+
+            while (currentNode != null)
+            {
+                Node currentNodeNext = currentNode.Next;
+                currentNode.Next = lastNode;
+                lastNode = currentNode;
+                currentNode = currentNodeNext;
+            }
+            linkedList.Head = lastNode;
+            return linkedList;
         }
     }
 }
