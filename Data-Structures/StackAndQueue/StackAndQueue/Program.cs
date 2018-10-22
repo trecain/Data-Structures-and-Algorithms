@@ -9,19 +9,31 @@ namespace StackAndQueue
         public static void Main(string[] args)
         {
             ///<summary>
-            ///
+            /// Queues and Stack methods are invoked
             /// </summary>
             Console.WriteLine("Data Structure: Stack and Queue");
             Stack();
             QueueStack();
         }
 
+
+        /// <summary>
+        ///  Creates stack with one node
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns>The newly created stack</returns>
         public static Stack CreateNewStack(Node node)
         {
             Stack newStack = new Stack(new Node(3));
             return newStack;
         }
 
+
+        /// <summary>
+        /// Creates a queue with one node
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
         public static Queue CreateNewQueue(Node node)
         {
             Queue createdQueue = new Queue(new Node(9));
@@ -29,6 +41,9 @@ namespace StackAndQueue
         }
 
 
+        /// <summary>
+        /// Adds and pops nodes off the stack and logs them to the console
+        /// </summary>
         public static void Stack()
         {
             Stack createdStack = CreateNewStack(new Node(4));
@@ -47,6 +62,9 @@ namespace StackAndQueue
         }
 
 
+        /// <summary>
+        /// Adds and pops nodes off the queue and logs to the Console
+        /// </summary>
         public static void QueueStack()
         {
             Queue createdQueue = CreateNewQueue(new Node(8));
