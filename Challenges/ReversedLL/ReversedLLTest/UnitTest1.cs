@@ -45,7 +45,7 @@ namespace ReversedLLTest
             linkedList.Add(new Node(4));
             linkedList.Add(new Node(4));
 
-            Assert.Equal("9 --> 4 --> 4 --> 4 --> 9 --> 4 --> 4 --> NULL\n", Program.ReverseLL(linkedList).Print());
+            Assert.Equal("3 --> 9 --> 4 --> 9 --> 4 --> 4 --> 4 --> 9 --> 4 --> 4 --> NULL\n", Program.ReverseLL(linkedList).Print());
         }
     }
 }
