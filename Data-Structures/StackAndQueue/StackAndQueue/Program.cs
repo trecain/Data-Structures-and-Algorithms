@@ -22,7 +22,7 @@ namespace StackAndQueue
         /// </summary>
         /// <param name="node"></param>
         /// <returns>The newly created stack</returns>
-        public static Stack CreateNewStack(Node node)
+        public static Stack CreateNewStack()
         {
             Stack newStack = new Stack(new Node(3));
             return newStack;
@@ -34,7 +34,7 @@ namespace StackAndQueue
         /// </summary>
         /// <param name="node"></param>
         /// <returns></returns>
-        public static Queue CreateNewQueue(Node node)
+        public static Queue CreateNewQueue()
         {
             Queue createdQueue = new Queue(new Node(9));
             return createdQueue;
@@ -46,7 +46,7 @@ namespace StackAndQueue
         /// </summary>
         public static void Stack()
         {
-            Stack createdStack = CreateNewStack(new Node(4));
+            Stack createdStack = CreateNewStack();
 
             for (int i = 0; i < 10; i++)
             {
@@ -67,7 +67,7 @@ namespace StackAndQueue
         /// </summary>
         public static void QueueStack()
         {
-            Queue createdQueue = CreateNewQueue(new Node(8));
+            Queue createdQueue = CreateNewQueue();
             for (int i = 0; i < 10; i++)
             {
                 createdQueue.addsNodeToEndOfTheQueue(new Node(i));
