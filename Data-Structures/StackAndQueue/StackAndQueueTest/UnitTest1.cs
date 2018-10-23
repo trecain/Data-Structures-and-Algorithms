@@ -58,7 +58,7 @@ namespace StackAndQueueTest
         public void CanRemoveNodeFromQueue(int value, int expectedValue)
         {
             Queue testQueue = new Queue(new Node(value));
-            Assert.Equal(expectedValue, testQueue.RemovesNodeFromFrontOfTheQueue().Value);
+            Assert.Equal(expectedValue, testQueue.Dequeue().Value);
         }
 
         [Fact]

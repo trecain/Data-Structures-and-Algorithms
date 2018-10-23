@@ -61,7 +61,7 @@ namespace StackAndQueue
             }
         }
 
-
+        
         /// <summary>
         /// Adds and pops nodes off the queue and logs to the Console
         /// </summary>
@@ -70,13 +70,13 @@ namespace StackAndQueue
             Queue createdQueue = CreateNewQueue();
             for (int i = 0; i < 10; i++)
             {
-                createdQueue.addsNodeToEndOfTheQueue(new Node(i));
+                createdQueue.Enqueue(new Node(i));
                 Console.WriteLine($"{i} was Queued");
             }
 
             for (int j = 0; j < 10; j++)
             {
-                Node removedNode = createdQueue.RemovesNodeFromFrontOfTheQueue();
+                Node removedNode = createdQueue.Dequeue();
                 Console.WriteLine($"{removedNode.Value} was removed from the Queue");
             }
         }
