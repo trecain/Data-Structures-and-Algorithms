@@ -9,4 +9,4 @@ Write a method that takes in a Linked List and outputs the nodes in the list in 
 - Space: O(1) We do not create anything new in space.
 
 ## Solution
-![array shift whiteboard](https://github.com/trecain/Data-Structures-and-Algorithms/blob/array_shift/assets/arrayShift.jpg)
+![array shift whiteboard](https://github.com/trecain/Data-Structures-and-Algorithms/blob/master/assets/ReversedLL.PNG)

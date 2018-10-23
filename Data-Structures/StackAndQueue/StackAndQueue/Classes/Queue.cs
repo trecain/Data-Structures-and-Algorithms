@@ -8,7 +8,7 @@ namespace StackAndQueue.Classes
     public class Queue
     {
         public Node Front { get; set; }
-        public Node Back { get; set; }
+        public Node Rear { get; set; }
 
         ///<summary>
         /// A new Queue is created with front and back nodes.
@@ -18,7 +18,7 @@ namespace StackAndQueue.Classes
         public Queue(Node node)
         {
             Front = node;
-            Back = node;
+            Rear = node;
         }
 
 
@@ -36,10 +36,10 @@ namespace StackAndQueue.Classes
         /// Adds node to the end of the Queue
         /// </summary>
         /// <param name="node">Node to be added</param>
-        public void addsNodeToEndOfTheQueue(Node node)
+        public void Enqueue(Node node)
         {
-            Back.Next = node;
-            Back = node;
+            Rear.Next = node;
+            Rear = node;
         }
 
 
@@ -48,7 +48,7 @@ namespace StackAndQueue.Classes
         /// </summary>
         /// <param name="node"></param>
         /// <returns></returns>
-        public Node RemovesNodeFromFrontOfTheQueue()
+        public Node Dequeue()
         {
             Node holdsPeekedQueue = View();
             Front = Front.Next;

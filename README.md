@@ -10,6 +10,6 @@
 
 4. [Implementation: Linked List](#)
 
-5. [Challenge 5](#)
+5. [Fibonacci](#)
 
 6. [Challenge 6](#)
