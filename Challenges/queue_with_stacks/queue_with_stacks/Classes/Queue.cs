@@ -16,24 +16,27 @@ namespace queue_with_stacks.Classes
             stackNewestOnTop.Push(node);
         }
 
-        public Queue(Node node)
-        {
-            stackNewestOnTop = new Stack(node);
-            stackOldestOnTop = new Stack(node);
-            stackOldestOnTop.Pop();
-        }
-
         public Node Peek()
         {
-            return stackNewestOnTop.View();
+            shiftStacks();
+            return stackOldestOnTop.View();
         }
 
         private void shiftStacks()
         {
-            if (stackOldestOnTop. 0)
+            if (stackOldestOnTop.TopNode == null)
             {
-
+                while (stackNewestOnTop.TopNode != null)
+                {
+                    stackOldestOnTop.Push(stackOldestOnTop.Pop());
+                }
             }
+        }
+
+        public Node Dequeue()
+        {
+            shiftStacks();
+            return stackOldestOnTop.Pop();
         }
     }
 }

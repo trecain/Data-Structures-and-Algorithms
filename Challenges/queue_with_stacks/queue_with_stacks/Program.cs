@@ -8,17 +8,19 @@ namespace queue_with_stacks
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Queue with Two Stacks");
-            Stack s1 = new Stack(new Node(3));
-            Stack s2 = new Stack(new Node(9));
 
         }
 
-
-        public void Enqueue (Node Node)
+        static void QueueWithStacks()
         {
-            s1.Pop();
+            Queue queue = new Queue(new Node(9));
+            queue.Enqueue(new Node(9));
+            queue.Enqueue(new Node(8));
+            queue.Enqueue(new Node(7));
+            queue.Enqueue(new Node(6));
 
+            Console.WriteLine("que " + queue.View());
         }
+      
     }
 }
