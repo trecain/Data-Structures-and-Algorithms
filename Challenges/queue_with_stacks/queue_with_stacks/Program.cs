@@ -8,17 +8,16 @@ namespace queue_with_stacks
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Queue q = new Queue(new Node(10));
-            q.addsNodeToEndOfTheQueue(new Node(15));
-            q.addsNodeToEndOfTheQueue(new Node(20));
-            q.addsNodeToEndOfTheQueue(new Node(5));
+            Console.WriteLine("Queue with Two Stacks");
+            Stack s1 = new Stack(new Node(3));
+            Stack s2 = new Stack(new Node(9));
 
-            Console.WriteLine("Last node added");
-            Console.WriteLine(q.RemovesNodeFromFrontOfTheQueue().Value);
-            Console.WriteLine(q.RemovesNodeFromFrontOfTheQueue().Value);
-            Console.WriteLine(q.RemovesNodeFromFrontOfTheQueue().Value);
-            Console.WriteLine(q.RemovesNodeFromFrontOfTheQueue().Value);
+        }
+
+
+        public void Enqueue (Node Node)
+        {
+            s1.Pop();
 
         }
     }
