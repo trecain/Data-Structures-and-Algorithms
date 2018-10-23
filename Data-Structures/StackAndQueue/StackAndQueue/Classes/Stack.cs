@@ -7,7 +7,7 @@ namespace StackAndQueue.Classes
 {
     public class Stack
     {
-        public Node TopNode { get; set; }
+        public Node Top { get; set; }
 
 
         /// <summary>
@@ -16,7 +16,7 @@ namespace StackAndQueue.Classes
         /// <param name="node">Node to be put in the stack</param>
         public Stack(Node node)
         {
-            TopNode = node;
+            Top = node;
         }
 
 
@@ -24,9 +24,9 @@ namespace StackAndQueue.Classes
         /// Views the the top node
         /// </summary>
         /// <returns>Top Node</returns>
-        public Node View()
+        public Node Peek()
         {
-            return TopNode;
+            return Top;
         }
 
 
@@ -36,10 +36,10 @@ namespace StackAndQueue.Classes
         /// <returns>removed Node</returns>
         public Node Pop()
         {
-            Node top = View();
-            TopNode = top.Next;
-            top.Next = null;
-            return top;
+            Node temp = Peek();
+            Top = Top.Next;
+            temp.Next = null;
+            return temp;
         }
 
 
@@ -49,8 +49,8 @@ namespace StackAndQueue.Classes
         /// <param name="node"></param>
         public void Push(Node node)
         {
-            node.Next = TopNode;
-            TopNode = node;
+            node.Next = Top;
+            Top = node;
         }
     }
 }

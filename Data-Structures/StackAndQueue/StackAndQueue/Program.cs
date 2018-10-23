@@ -48,12 +48,16 @@ namespace StackAndQueue
         {
             Stack createdStack = CreateNewStack();
 
-            for (int i = 0; i < 10; i++)
+            Console.WriteLine("");
+            Console.WriteLine("===================Stack Push======================");
+            for (int i = 1; i < 10; i++)
             {
                 createdStack.Push(new Node(i));
                 Console.WriteLine($"{i} was pushed to the stack");
             }
 
+            Console.WriteLine("");
+            Console.WriteLine("===================Stack Pop======================");
             for (int j = 0; j < 10; j++)
             {
                 Node poppedNode = createdStack.Pop();
@@ -67,13 +71,17 @@ namespace StackAndQueue
         /// </summary>
         public static void QueueStack()
         {
+            Console.WriteLine("");
+            Console.WriteLine("===================Enqueue======================");
             Queue createdQueue = CreateNewQueue();
-            for (int i = 0; i < 10; i++)
+            for (int i = 1; i < 10; i++)
             {
                 createdQueue.Enqueue(new Node(i));
-                Console.WriteLine($"{i} was Queued");
+                Console.WriteLine($"{i} was added to the Queued");
             }
 
+            Console.WriteLine("");
+            Console.WriteLine("===================Dequeue======================");
             for (int j = 0; j < 10; j++)
             {
                 Node removedNode = createdQueue.Dequeue();

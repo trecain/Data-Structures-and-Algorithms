@@ -26,7 +26,7 @@ namespace StackAndQueue.Classes
         /// Returns the Queues front node
         /// </summary>
         /// <returns>The front Node</returns>
-        public Node View()
+        public Node Peek()
         {
             return Front;
         }
@@ -50,10 +50,10 @@ namespace StackAndQueue.Classes
         /// <returns></returns>
         public Node Dequeue()
         {
-            Node holdsPeekedQueue = View();
+            Node temp = Peek();
             Front = Front.Next;
-            holdsPeekedQueue.Next = null;
-            return holdsPeekedQueue;
+            temp.Next = null;
+            return temp;
         }
     }
 }
