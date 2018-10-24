@@ -8,11 +8,35 @@ namespace queue_with_stacks
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Queue with Two Stacks");
+            try
+            {
+                QueueWithStacks();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Error: {e.Message}");
+            }   
+        }
 
-            Stack stackOne = new Stack(new Node(3));
-            Stack stackTwo = new Stack(new Node(1));
+        static void QueueWithStacks()
+        {
+            Classes.Queue myQueue = new Classes.Queue(new Node(1));
+            myQueue.Enqueue(new Node(2));
+            myQueue.Enqueue(new Node(3));
+            myQueue.Enqueue(new Node(4));
+            myQueue.Enqueue(new Node(5));
 
+            Console.WriteLine("====================Stack in Queue=========================");
+            Console.WriteLine($"1. Node: {myQueue.Peek().Value}");
+            //myQueue.Dequeue();
+            Console.WriteLine($"2. Node: {myQueue.Peek().Value}");
+            //myQueue.Dequeue();
+            Console.WriteLine($"3. Node: {myQueue.Peek().Value}");
+            //myQueue.Dequeue();
+            Console.WriteLine($"4. Node: {myQueue.Peek().Value}");
+            //myQueue.Dequeue();
+            Console.WriteLine($"5. Node: {myQueue.Peek().Value}");
+            //myQueue.Dequeue();          
         }
     }
 }
