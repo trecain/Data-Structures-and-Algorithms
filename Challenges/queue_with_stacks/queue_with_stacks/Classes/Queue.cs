@@ -8,35 +8,57 @@ namespace queue_with_stacks.Classes
 {
     class Queue
     {
-        private Stack stackNewestOnTop { get; set; }
-        private Stack stackOldestOnTop { get; set; }
-   
-       public void Enqueue (Node node)
+        /// <summary>
+        /// Sets the two properties for the front and the rear nodes of the queue
+        /// </summary>
+        public Node Front { get; set; }
+        public Node Rear { get; set; }
+
+        public Queue(Node node)
         {
-            stackNewestOnTop.Push(node);
+            Front = node;
+            Rear = node;
         }
 
+
+        /// <summary>
+        /// Returns the first node of the queue
+        /// </summary>
+        /// <returns></returns>
         public Node Peek()
         {
-            shiftStacks();
-            return stackOldestOnTop.View();
+            return Front;
         }
 
-        private void shiftStacks()
+
+        /// <summary>
+        /// Adds a node the the queue
+        /// </summary>
+        /// <param name="node"></param>
+        public void Enqueue(Node node)
         {
-            if (stackOldestOnTop.TopNode == null)
-            {
-                while (stackNewestOnTop.TopNode != null)
-                {
-                    stackOldestOnTop.Push(stackOldestOnTop.Pop());
-                }
-            }
+            Rear.Next = node;
+            Rear = node;
         }
 
+
+        /// <summary>
+        /// returns the removed node
+        /// </summary>
+        /// <returns>temp</returns>
         public Node Dequeue()
         {
-            shiftStacks();
-            return stackOldestOnTop.Pop();
+            try
+            {
+                Node temp = Front;
+                Front = Front.Next;
+                temp.Next = null;
+                return temp; 
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }
