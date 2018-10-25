@@ -8,7 +8,7 @@ namespace StackAndQueue.Classes
     public class Stack
     {
         public Node TopNode { get; set; }
-
+        public int Size { get; set; } = 0;
 
         /// <summary>
         /// Constructs a new stack
@@ -17,6 +17,7 @@ namespace StackAndQueue.Classes
         public Stack(Node node)
         {
             TopNode = node;
+            Size = 1;
         }
 
 
@@ -36,10 +37,18 @@ namespace StackAndQueue.Classes
         /// <returns>removed Node</returns>
         public Node Pop()
         {
-            Node top = View();
-            TopNode = top.Next;
-            top.Next = null;
-            return top;
+            try 
+            {
+                Size--;
+                Node top = View();
+                TopNode = top.Next;
+                top.Next = null;
+                return top;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
 
@@ -51,6 +60,7 @@ namespace StackAndQueue.Classes
         {
             node.Next = TopNode;
             TopNode = node;
+            Size++;
         }
     }
 }

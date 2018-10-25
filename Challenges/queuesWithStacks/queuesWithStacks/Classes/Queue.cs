@@ -6,7 +6,7 @@ using Day06_LinkedList.Classes;
 
 namespace queuesWithStacks.Classes
 {
-    class Queue
+    public class Queue
     {
         /// <summary>
         /// Sets the properties to hold the two stacks for the queue
@@ -23,6 +23,7 @@ namespace queuesWithStacks.Classes
         {
             stackOne = new Stack(node);
             stackTwo = new Stack(node);
+            stackTwo.Pop();
         }
 
         /// <summary>
@@ -41,29 +42,29 @@ namespace queuesWithStacks.Classes
         /// <param name="node"></param>
         public void Enqueue(Node node)
         {
-            while (stackOne.TopNode != null)
+            while (stackOne.Size > 0)
             {
                 stackTwo.Push(stackOne.Pop());
             }
 
-            while (stackTwo.TopNode != null)
+            stackTwo.Push(node);
+
+            while (stackTwo.Size > 0)
             {
                 stackOne.Push(stackTwo.Pop());
             }
         }
 
+
+        /// <summary>
+        /// Dequeues a specified node
+        /// </summary>
+        /// <returns>Returns the node on the top of the stack</returns>
         public Node Dequeue()
         {
-            if (stackOne.TopNode != null)
+            if (stackOne.Size > 0)
             {
-                try
-                {
-                    return stackOne.Pop();
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                return stackOne.Pop();
             }
             throw new NullReferenceException();
         }

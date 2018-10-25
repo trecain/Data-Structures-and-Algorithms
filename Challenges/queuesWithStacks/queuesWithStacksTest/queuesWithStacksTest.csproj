@@ -16,4 +16,13 @@
     <ProjectReference Include="..\queuesWithStacks\queuesWithStacks.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="Day06_LinkedList">
+      <HintPath>..\..\..\Data-Structures\Day06_LinkedList\Day06_LinkedList\bin\Debug\netcoreapp2.1\Day06_LinkedList.dll</HintPath>
+    </Reference>
+    <Reference Include="StackAndQueue">
+      <HintPath>..\..\..\Data-Structures\StackAndQueue\StackAndQueue\bin\Debug\netcoreapp2.1\StackAndQueue.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
