@@ -1,8 +1,7 @@
 using System;
 using Xunit;
-using queue_with_stacks_test;
 
-namespace queue_with_stacks_test
+namespace fifoAnimalShelterTest
 {
     public class UnitTest1
     {
