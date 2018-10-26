@@ -31,4 +31,4 @@ Enqueue - Insert node in queue
 ```
 
 ## Solution
-![Queue with Two Stacks whiteboard](https://github.com/trecain/Data-Structures-and-Algorithms/blob/master/assets/wb08.jpg)
+![Queue with Two Stacks whiteboard](https://github.com/trecain/Data-Structures-and-Algorithms/blob/master/assets/queueWithStacks.PNG)
