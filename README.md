@@ -12,4 +12,4 @@
 
 5. [Fibonacci](#)
 
-6. [Challenge 6](#)
+6. [Implement Queue with Two stacks](https://github.com/trecain/Data-Structures-and-Algorithms/tree/master/Challenges/queuesWithStacks)
