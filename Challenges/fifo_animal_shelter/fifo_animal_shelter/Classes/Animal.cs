@@ -4,8 +4,11 @@ using System.Text;
 
 namespace fifo_animal_shelter.Classes
 {
-    class Animal
+    public abstract class Animal
     {
-        public virtual string Name { get; set; }
+        /// <summary>
+        /// Gets or sets the Name property
+        /// </summary>
+        public string Name { get; set; }
     }
 }
