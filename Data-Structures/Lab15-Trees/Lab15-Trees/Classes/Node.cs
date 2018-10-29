@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Lab15_Trees.Classes
 {
-    class Node
+    public class Node
     {
         /// <summary>
         /// Setting the properties for the node, left and right
