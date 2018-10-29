@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 using StackAndQueue.Classes;
-using Day06_LinkedList.Classes;
 
 
 namespace queue_with_stacks.Classes
