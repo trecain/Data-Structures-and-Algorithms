@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Day06_LinkedList.Classes;
 
 namespace StackAndQueue.Classes
 {
