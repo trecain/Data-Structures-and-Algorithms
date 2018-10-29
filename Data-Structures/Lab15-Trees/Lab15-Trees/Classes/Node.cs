@@ -24,5 +24,27 @@ namespace Lab15_Trees.Classes
             right = null;
         }
 
+        public Node GetLeft()
+        {
+            return left;
+        }
+
+        public Node GetRight()
+        {
+            return right;
+        }
+
+        public void SetLeft(Node node)
+        {
+            left = node;
+        }
+
+        public void SetRight(Node node)
+        {
+            right = node;
+        }
+
+
+
     }
 }
