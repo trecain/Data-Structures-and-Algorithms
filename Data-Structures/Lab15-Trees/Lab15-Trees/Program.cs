@@ -82,5 +82,14 @@ namespace Lab15_Trees
             Console.WriteLine("");
             Console.WriteLine("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         }
+
+        public static void BinarySearchTree()
+        {
+            Console.WriteLine("+++++++++++++++++++++++++++++ Binary Search Tree +++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+        }
+
+        
+        
     }
 }
