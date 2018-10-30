@@ -84,6 +84,10 @@ namespace Lab15_Trees
             Console.WriteLine("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         }
 
+
+        /// <summary>
+        /// calls and sets up the binary search tree
+        /// </summary>
         public static void BinarySearchTree()
         {
             Console.WriteLine("+++++++++++++++++++++++++++++ Binary Search Tree +++++++++++++++++++++++++++++++++++++++++++++++++++++");
@@ -98,8 +102,5 @@ namespace Lab15_Trees
             BT.Add(new Node(90));
             Console.WriteLine($"Second Right Sub-Tree Node: {BT.Root.RightChild.RightChild.Data}");
         }
-
-
-
     }
 }

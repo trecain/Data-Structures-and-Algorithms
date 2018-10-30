@@ -29,7 +29,7 @@ namespace Lab15_Trees.Classes
         public void Add(Node node)
         {
            Node root = Root;
-           if (Root.Data == null)
+           if (Root == null)
            {
                Root = node;
            }
