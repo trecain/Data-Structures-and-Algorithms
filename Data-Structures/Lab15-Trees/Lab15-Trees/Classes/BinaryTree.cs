@@ -13,7 +13,7 @@ namespace Lab15_Trees.Classes
 
 
         /// <summary>
-        /// Sets the root node of the binary tree
+        /// BinaryTree constructor
         /// </summary>
         /// <param name="root"></param>
         public BinaryTree(Node root)
@@ -23,52 +23,79 @@ namespace Lab15_Trees.Classes
 
 
         /// <summary>
-        /// 
+        /// Preorder traversal
         /// </summary>
-        /// <param name="node"></param>
-        public void Add(Node node)
+        /// <param name="root"></param>
+        /// <param name="arrayOfNodes"></param>
+        /// <returns></returns>
+        public static List<Node> PreOrder(Node root, List<Node> arrayOfNodes = null)
         {
-            if (Root == null)
-            {
-                Root = node;
-            }
-            else
-            {
-                Queue<Node> queue = new Queue<Node>();
-                queue.Enqueue(Root);
-                while (queue.Count > 0)
-                {
-                    Node curr = queue.Dequeue();
-                    if (curr.GetRight() != null && curr.GetLeft() != null)
-                    {
-                        queue.Enqueue(node.GetLeft());
-                        queue.Enqueue(node.GetRight());
-                    }
-                    else
-                    {
-                        if (curr.GetLeft() == null)
-                        {
-                            curr.SetLeft(node);
-                        }
+            if (root == null)
+                return null;
 
-                        if (curr.GetLeft() == null)
-                        {
-                            curr.SetRight(node);
-                        }
+            if (arrayOfNodes == null)
+                arrayOfNodes = new List<Node>();
+   
+            arrayOfNodes.Add(root);
 
-                    }
-                }
-            }
+            if (root.LeftChild != null)
+                PreOrder(root.LeftChild, arrayOfNodes);
+
+            if (root.RightChild != null)
+                PreOrder(root.RightChild, arrayOfNodes);
+
+            return arrayOfNodes;
         }
 
-        public Node[] PreOrder(Node node)
-        {
-            Node[] nodes = new Node[0];
-            nodes[0] = node;
 
-            if (node.GetLeft() != null)
-            {
-            }
+        /// <summary>
+        /// Inorder traversal
+        /// </summary>
+        /// <param name="root"></param>
+        /// <param name="arrayOfNodes"></param>
+        /// <returns></returns>
+        public static List<Node> InOrder(Node root, List<Node> arrayOfNodes = null)
+        {
+            if (root == null)
+                return null;
+
+            if (arrayOfNodes == null)
+                arrayOfNodes = new List<Node>();
+
+            if (root.LeftChild != null)
+                InOrder(root.LeftChild, arrayOfNodes);
+
+            arrayOfNodes.Add(root);
+
+            if (root.RightChild != null)
+                InOrder(root.RightChild, arrayOfNodes);
+    
+            return arrayOfNodes;
+        }
+
+
+        /// <summary>
+        /// Post order traversal
+        /// </summary>
+        /// <param name="root"></param>
+        /// <param name="arrayOfNodes"></param>
+        /// <returns></returns>
+        public static List<Node> PostOrder(Node root, List<Node> arrayOfNodes = null)
+        {
+            if (root == null)
+                return null; 
+
+            if (arrayOfNodes == null)
+                arrayOfNodes = new List<Node>();
+
+            if (root.LeftChild != null)
+                PostOrder(root.LeftChild, arrayOfNodes);
+
+            if (root.RightChild != null)
+                PostOrder(root.RightChild, arrayOfNodes);
+         
+            arrayOfNodes.Add(root);
+            return arrayOfNodes;
         }
     }
 }
