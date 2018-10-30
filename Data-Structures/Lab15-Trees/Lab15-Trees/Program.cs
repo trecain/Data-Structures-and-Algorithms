@@ -10,6 +10,7 @@ namespace Lab15_Trees
         {
             Console.WriteLine("Binary Trees");
             CreateABinaryTree();
+            BinarySearchTree();
         }
 
 
@@ -50,7 +51,7 @@ namespace Lab15_Trees
             RunBinaryTreeMethods(root);
         }
 
-
+       
         /// <summary>
         /// Runs pre, in, post order methods in binary tree
         /// </summary>
@@ -86,10 +87,19 @@ namespace Lab15_Trees
         public static void BinarySearchTree()
         {
             Console.WriteLine("+++++++++++++++++++++++++++++ Binary Search Tree +++++++++++++++++++++++++++++++++++++++++++++++++++++");
-
+            BinarySearchTree BT = new BinarySearchTree(new Node(17));
+            Console.Write($"Root: {BT.Root.Data} -Edge-> ");
+            BT.Add(new Node(80));
+            Console.WriteLine($"First Right Sub-Tree Node: {BT.Root.RightChild.Data} -Edge-> ");
+            BT.Add(new Node(9));
+            Console.WriteLine($"First Left Sub-Tree Node: {BT.Root.LeftChild.Data}");
+            BT.Add(new Node(19));
+            Console.WriteLine($"Second Left Sub-Tree Node: {BT.Root.LeftChild.RightChild.Data}");
+            BT.Add(new Node(90));
+            Console.WriteLine($"Second Right Sub-Tree Node: {BT.Root.RightChild.RightChild.Data}");
         }
 
-        
-        
+
+
     }
 }

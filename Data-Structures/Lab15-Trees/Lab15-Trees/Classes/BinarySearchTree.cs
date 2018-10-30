@@ -22,54 +22,46 @@ namespace Lab15_Trees.Classes
         }
 
 
-
+        /// <summary>
+        /// adds a node to the binary search tree
+        /// </summary>
+        /// <param name="node"></param>
         public void Add(Node node)
         {
-            Node curr = Root;
-            if (((int)node.Data <= (int)curr.Data))
+           Node root = Root;
+           if (Root.Data == null)
+           {
+               Root = node;
+           }
+           else if ((int)node.Data < (int)Root.Data)
+           {
+               Root.LeftChild = node;
+           }
+           else if ((int)node.Data > (int)Root.Data)
             {
-                if (curr.LeftChild == null)
-                {
-                    curr.LeftChild = node;
-                }
-                else
-                {
-                    Add(node);
-                }
-            }
-            else
-            {
-                if (curr.RightChild == null)
-                {
-                    curr.RightChild = node;
-                }
-                else
-                {
-                    Add(node);
-                }
+                Root.RightChild = node;
             }
         }
 
-
         
-        public Node Search(int value)
+        /// <summary>
+        /// searches binary tree comparing new node value to root node value and placing node left or right
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public Node Search(Node node)
         {
             Node root = Root;
             while (root != null)
             {
-                if (value == (int)root.Data)
+                if ((int)node.Data == (int)root.Data)
                 {
                     return root;
                 }
-
-                if (value > (int)root.Data)
-                {
-                    root = root.RightChild;
-                }
-                else
-                {
+                else if ((int)node.Data < (int)root.Data)
                     root = root.LeftChild;
-                }
+                else
+                    root = root.RightChild;
             }
             return null;
         }
