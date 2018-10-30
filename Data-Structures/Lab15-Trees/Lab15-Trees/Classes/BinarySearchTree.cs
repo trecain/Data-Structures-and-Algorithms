@@ -8,10 +8,7 @@ namespace Lab15_Trees.Classes
     {
         public void Add(int value)
         {
-            if (value <= data)
-            {
-                if ()
-            }
+           
         }
     }
 }
