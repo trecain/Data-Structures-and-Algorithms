@@ -9,42 +9,17 @@ namespace Lab15_Trees.Classes
         /// <summary>
         /// Setting the properties for the node, left and right
         /// </summary>
-        public int Value { get; set; }
-        public Node left { get; set; }
-        public Node right { get; set; }
+        public Object Data { get; set; }
+        public Node LeftChild { get; set; }
+        public Node RightChild { get; set; }
 
         /// <summary>
         /// Constructor for node, sets left and right node to null
         /// </summary>
         /// <param name="value"></param>
-        public Node (int value)
+        public Node(Object value)
         {
-            Value = Value;
-            left = null;
-            right = null;
+            Data = value;
         }
-
-        public Node GetLeft()
-        {
-            return left;
-        }
-
-        public Node GetRight()
-        {
-            return right;
-        }
-
-        public void SetLeft(Node node)
-        {
-            left = node;
-        }
-
-        public void SetRight(Node node)
-        {
-            right = node;
-        }
-
-
-
     }
 }

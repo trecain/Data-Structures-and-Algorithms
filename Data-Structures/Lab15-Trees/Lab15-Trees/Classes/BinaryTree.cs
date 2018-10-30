@@ -6,13 +6,26 @@ namespace Lab15_Trees.Classes
 {
     class BinaryTree
     {
+        /// <summary>
+        /// Gets and sets Root node for the tree
+        /// </summary>
         public Node Root { get; set; }
 
+
+        /// <summary>
+        /// Sets the root node of the binary tree
+        /// </summary>
+        /// <param name="root"></param>
         public BinaryTree(Node root)
         {
             Root = root;
         }
 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="node"></param>
         public void Add(Node node)
         {
             if (Root == null)
