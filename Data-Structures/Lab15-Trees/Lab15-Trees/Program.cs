@@ -8,9 +8,16 @@ namespace Lab15_Trees
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Binary Trees");
-            CreateABinaryTree();
-            BinarySearchTree();
+            try
+            {
+                Console.WriteLine("Binary Trees");
+                CreateABinaryTree();
+                BinarySearchTree();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Error: {e.Message}");
+            }
         }
 
 
@@ -93,13 +100,18 @@ namespace Lab15_Trees
             Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("+++++++++++++++++++++++++++++ Binary Search Tree +++++++++++++++++++++++++++++++++++++++++++++++++++++");
+            Console.WriteLine("");
+            Console.WriteLine("");
             Node favoriteNumberNode = new Node(3);
             BinarySearchTree BST = new BinarySearchTree(new BinaryTree(favoriteNumberNode));
+            Console.WriteLine("");
             BST.Add(new Node(80));
             BST.Add(new Node(9));
             BST.Add(new Node(19));
             BST.Add(new Node(90));
-            Console.WriteLine($"Search 1 in BST --> ");
+            Console.WriteLine(String.Join(" -Edge-> ", BinaryTree.PreOrder(BST.BT.Root).Select(val => (int)val.Data)));
+            Console.WriteLine("");
+            Console.WriteLine("Search returns the nine node: " + BST.Search(9).Data);
         }
     }
 }
