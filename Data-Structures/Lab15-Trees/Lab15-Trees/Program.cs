@@ -82,6 +82,14 @@ namespace Lab15_Trees
             Console.WriteLine(String.Join(" -Edge-> ", BinaryTree.PostOrder(root).Select(val => (int)val.Data)));
             Console.WriteLine("");
             Console.WriteLine("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        }
+
+
+        /// <summary>
+        /// calls and sets up the binary search tree
+        /// </summary>
+        public static void BinarySearchTree()
+        {
             Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("+++++++++++++++++++++++++++++ Binary Search Tree +++++++++++++++++++++++++++++++++++++++++++++++++++++");
@@ -92,14 +100,6 @@ namespace Lab15_Trees
             BST.Add(new Node(19));
             BST.Add(new Node(90));
             Console.WriteLine($"Search 1 in BST --> ");
-        }
-
-
-        /// <summary>
-        /// calls and sets up the binary search tree
-        /// </summary>
-        public static void BinarySearchTree()
-        {
         }
     }
 }

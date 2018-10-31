@@ -31,7 +31,9 @@ namespace Lab15_Trees.Classes
             Node root = BT.Root;
 
             if (root == null)
+            {
                 BT.Root = node;
+            }
             else
             {
                 Node temp = root;
@@ -40,7 +42,7 @@ namespace Lab15_Trees.Classes
                     temp = root;
                     if ((int)node.Data < (int)node.Data)
                         root = root.RightChild;
-                    else if ((int)node.Data < (int)root.Data)
+                    if ((int)node.Data < (int)root.Data)
                         root = root.LeftChild;
                 }
 
