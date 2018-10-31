@@ -49,10 +49,29 @@ namespace BinaryTreeTest
             rightFirstRight.RightChild = rightSecondRight;
         }
 
-        [Fact]
-        public void CanDoABinarySearch()
+
+        /// <summary>
+        /// uses the binary search method to locate nodes and return 
+        /// </summary>
+        /// <param name="num"></param>
+        /// <param name="expect"></param>
+        [Theory]
+        [InlineData(9, 9)]
+        [InlineData(80, 80)]
+        [InlineData(19, 19)]
+        [InlineData(90, 90)]
+        public void CanDoABinarySearch(int num, int expect)
         {
+            Node favoriteNumberNode = new Node(3);
+            BinarySearchTree BST = new BinarySearchTree(new BinaryTree(favoriteNumberNode));
+            Console.WriteLine("");
+            BST.Add(new Node(80));
+            BST.Add(new Node(9));
+            BST.Add(new Node(19));
+            BST.Add(new Node(90));
+            Assert.Equal(expect, BST.Search(num).Data);
         }
+
 
         /// <summary>
         /// Test if a preorder traversal can be done
