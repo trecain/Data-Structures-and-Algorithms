@@ -9,16 +9,16 @@ namespace Lab15_Trees.Classes
         /// <summary>
         /// gets and sets a binary tre 
         /// </summary>
-        public Node Root { get; set; }
+        public BinaryTree BT { get; set; }
         
 
         /// <summary>
         /// Binary search tree constructor
         /// </summary>
         /// <param name="bt"></param>
-        public  BinarySearchTree(Node root)
+        public  BinarySearchTree(BinaryTree binaryTree)
         {
-            Root = root;
+            BT = binaryTree;
         }
 
 
@@ -28,18 +28,26 @@ namespace Lab15_Trees.Classes
         /// <param name="node"></param>
         public void Add(Node node)
         {
-           Node root = Root;
-           if (Root == null)
-           {
-               Root = node;
-           }
-           else if ((int)node.Data < (int)Root.Data)
-           {
-               Root.LeftChild = node;
-           }
-           else if ((int)node.Data > (int)Root.Data)
+            Node root = BT.Root;
+
+            if (root == null)
+                BT.Root = node;
+            else
             {
-                Root.RightChild = node;
+                Node temp = root;
+                while (root != null)
+                {
+                    temp = root;
+                    if ((int)node.Data < (int)node.Data)
+                        root = root.RightChild;
+                    else if ((int)node.Data < (int)root.Data)
+                        root = root.LeftChild;
+                }
+
+                if ((int)node.Data > (int)temp.Data)
+                    temp.RightChild = node;
+                else
+                    temp.LeftChild = node;
             }
         }
 
@@ -47,23 +55,25 @@ namespace Lab15_Trees.Classes
         /// <summary>
         /// searches binary tree comparing new node value to root node value and placing node left or right
         /// </summary>
-        /// <param name="node"></param>
+        /// <param name="value">The value you are looking for on the tree</param>
         /// <returns></returns>
-        public Node Search(Node node)
+        public Node Search(int value)
         {
-            Node root = Root;
+            Node root = BT.Root;
             while (root != null)
             {
-                if ((int)node.Data == (int)root.Data)
-                {
+                if ((int)root.Data == value)
                     return root;
-                }
-                else if ((int)node.Data < (int)root.Data)
-                    root = root.LeftChild;
-                else
+                else if ((int)root.Data < value)
                     root = root.RightChild;
+                else
+                    root = root.LeftChild;
             }
+            ///<summary>
+            /// If nothing is found return null
+            /// </summary>
             return null;
         }
+
     }
 }

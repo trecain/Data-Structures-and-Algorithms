@@ -82,6 +82,16 @@ namespace Lab15_Trees
             Console.WriteLine(String.Join(" -Edge-> ", BinaryTree.PostOrder(root).Select(val => (int)val.Data)));
             Console.WriteLine("");
             Console.WriteLine("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("+++++++++++++++++++++++++++++ Binary Search Tree +++++++++++++++++++++++++++++++++++++++++++++++++++++");
+            Node favoriteNumberNode = new Node(3);
+            BinarySearchTree BST = new BinarySearchTree(new BinaryTree(favoriteNumberNode));
+            BST.Add(new Node(80));
+            BST.Add(new Node(9));
+            BST.Add(new Node(19));
+            BST.Add(new Node(90));
+            Console.WriteLine($"Search 1 in BST --> ");
         }
 
 
@@ -90,17 +100,6 @@ namespace Lab15_Trees
         /// </summary>
         public static void BinarySearchTree()
         {
-            Console.WriteLine("+++++++++++++++++++++++++++++ Binary Search Tree +++++++++++++++++++++++++++++++++++++++++++++++++++++");
-            BinarySearchTree BT = new BinarySearchTree(new Node(17));
-            Console.Write($"Root: {BT.Root.Data} -Edge-> ");
-            BT.Add(new Node(80));
-            Console.WriteLine($"First Right Sub-Tree Node: {BT.Root.RightChild.Data} -Edge-> ");
-            BT.Add(new Node(9));
-            Console.WriteLine($"First Left Sub-Tree Node: {BT.Root.LeftChild.Data}");
-            BT.Add(new Node(19));
-            Console.WriteLine($"Second Left Sub-Tree Node: {BT.Root.LeftChild.RightChild.Data}");
-            BT.Add(new Node(90));
-            Console.WriteLine($"Second Right Sub-Tree Node: {BT.Root.RightChild.RightChild.Data}");
         }
     }
 }
