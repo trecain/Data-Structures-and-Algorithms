@@ -4,7 +4,7 @@ using System.Text;
 
 namespace fifo_animal_shelter.Classes
 {
-    class AnimalShelter
+    public class AnimalShelter
     {
         /// <summary>
         /// Sets the properties to hold the front and rear animals
@@ -44,6 +44,12 @@ namespace fifo_animal_shelter.Classes
             RearAnimal = animal;
         }
 
+
+        /// <summary>
+        /// Takes in an animal preference and looks at type to know what node to return
+        /// </summary>
+        /// <param name="pref"></param>
+        /// <returns>Returns the animal node</returns>
         public Animal Dequeue(Animal pref)
         {
             Animal res = null;
@@ -76,6 +82,11 @@ namespace fifo_animal_shelter.Classes
             return res;
         }
 
+
+        /// <summary>
+        /// Dequeue and overload method and returns the animal
+        /// </summary>
+        /// <returns></returns>
         public Animal Dequeue()
         {
             Animal temp = Peek();

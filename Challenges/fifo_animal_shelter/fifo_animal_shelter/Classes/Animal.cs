@@ -16,5 +16,10 @@ namespace fifo_animal_shelter.Classes
         {
             Name = name;
         }
+
+        public Animal ()
+        {
+
+        }
     }
 }

@@ -36,7 +36,7 @@ namespace fifo_animal_shelter
             Console.WriteLine($"A dog named {bruno.Name} was taken into the shelter");
 
             Console.WriteLine("First Cat taken in: {0}", animalShelter.Dequeue().Name);
-            Console.WriteLine("First selected dog {0}", animalShelter.Dequeue(new Dog("tre")).Name);
+            Console.WriteLine("First selected dog in: {0}", animalShelter.Dequeue(new Dog()).Name);
         }
     }
 }
