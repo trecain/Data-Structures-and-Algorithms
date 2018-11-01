@@ -3,7 +3,7 @@ using StackAndQueue.Classes;
 
 namespace multi_bracket_validation
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
