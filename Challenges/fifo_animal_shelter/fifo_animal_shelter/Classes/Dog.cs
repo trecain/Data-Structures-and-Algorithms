@@ -6,5 +6,9 @@ namespace fifo_animal_shelter.Classes
 {
     class Dog : Animal
     {
+        public Dog(string Name) : base(Name)
+        {
+
+        }
     }
 }

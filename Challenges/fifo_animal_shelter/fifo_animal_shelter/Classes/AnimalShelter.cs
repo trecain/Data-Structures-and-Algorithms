@@ -1,76 +1,87 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using StackAndQueue.Classes;
 
 namespace fifo_animal_shelter.Classes
 {
     class AnimalShelter
     {
         /// <summary>
-        /// sets the queue for the animal shelter
+        /// Sets the properties to hold the front and rear animals
         /// </summary>
-        public Queue Queue { get; set; }
+        public Animal FrontAnimal { get; set; }
+        public Animal RearAnimal { get; set; }
+       
 
         /// <summary>
-        /// Animal constructor
+        /// Constructor to set the front and rear animals properties
         /// </summary>
-        public AnimalShelter()
+        /// <param name="animal"></param>
+        public AnimalShelter(Animal animal)
         {
-            ///<summary>
-            /// Creates a queue and adds a node with a value of nine
-            /// </summary>
-            Queue = new Queue(new Node(9));
-            Queue.Dequeue();
+            FrontAnimal = animal;
+            RearAnimal = animal;
         }
 
 
         /// <summary>
-        /// Enqueues the animal into the queue
+        /// Grabs the first animal and returns it
+        /// </summary>
+        /// <returns>Returns the first Animal node</returns>
+        public Animal Peek()
+        {
+            return FrontAnimal;
+        }
+
+
+        /// <summary>
+        /// Adds an animal to the rear of the queue
         /// </summary>
         /// <param name="animal"></param>
         public void Enqueue(Animal animal)
         {
-            Queue.Enqueue(new Node(animal));
+            RearAnimal.Next = animal;
+            RearAnimal = animal;
         }
 
-        public Animal Dequeue(string animal)
+        public Animal Dequeue(Animal pref)
         {
-            ///<summary>
-            /// checks to see if the animal is a dog or cat
-            /// cast queue to type animal and returns the the node value
-            /// </summary>
-            if (animal != "dog" && animal != "cat")
+            Animal res = null;
+            Animal temp = null;
+
+            if (pref.GetType() == FrontAnimal.GetType())
             {
-                return (Animal)Queue.Dequeue().Value;
+                res = Dequeue();
             }
-
-            ///<summary>
-            /// saves a reference to the peeked node on the queue for animal comparison
-            /// </summary>
-            Object head = Queue.View().Value;
-            Type animalType = (animal == "dog" ? typeof(Dog) : typeof(Cat));
-
-            if (Queue.View().Value.GetType() == animalType)
+            else
             {
-                return (Animal)Queue.Dequeue().Value;
-            }
-
-            Animal animalFound = null; 
-
-            ///<summary>
-            /// Search and reorder while animal found is null and queue is out of order
-            /// </summary>
-            while (animalFound == null || Queue.View().Value != head)
-            {
-                Queue.Enqueue(Queue.Dequeue());
-
-                if (animalFound == null && Queue.View().Value.GetType() == animalType)
+                temp = Dequeue();
+                Enqueue(temp);
+                while (FrontAnimal != temp)
                 {
-                    animalFound = (Animal)Queue.Dequeue().Value;
+                    if ((FrontAnimal.GetType() == pref.GetType()) && (res == null))
+                    {
+                        res = Dequeue();
+                    }
+                    else
+                    {
+                        Enqueue(Dequeue());
+                    }
                 }
             }
-            return animalFound;
+            if (res == null)
+            {
+                res = Dequeue();
+            }
+            return res;
+        }
+
+        public Animal Dequeue()
+        {
+            Animal temp = Peek();
+            FrontAnimal = FrontAnimal.Next;
+            temp.Next = null;
+            return temp;
         }
 
     }
