@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using StackAndQueue.Classes;
 
 
 namespace queue_with_stacks.Classes
 {
-    class Queue
+    public class Queue
     {
         /// <summary>
         /// Sets the two properties for the front and the rear nodes of the queue
         /// </summary>
-        public Node Front { get; set; }
-        public Node Rear { get; set; }
+        public fifo_animal_shelter.Classes.Node Front { get; set; }
+        public fifo_animal_shelter.Classes.Node Rear { get; set; }
 
-        public Queue(Node node)
+        public Queue(fifo_animal_shelter.Classes.Node node)
         {
             Front = node;
             Rear = node;
@@ -25,7 +24,7 @@ namespace queue_with_stacks.Classes
         /// Returns the first node of the queue
         /// </summary>
         /// <returns></returns>
-        public Node Peek()
+        public fifo_animal_shelter.Classes.Node Peek()
         {
             return Front;
         }
@@ -35,7 +34,7 @@ namespace queue_with_stacks.Classes
         /// Adds a node the the queue
         /// </summary>
         /// <param name="node"></param>
-        public void Enqueue(Node node)
+        public void Enqueue(fifo_animal_shelter.Classes.Node node)
         {
             Rear.Next = node;
             Rear = node;
@@ -46,11 +45,11 @@ namespace queue_with_stacks.Classes
         /// returns the removed node
         /// </summary>
         /// <returns>temp</returns>
-        public Node Dequeue()
+        public fifo_animal_shelter.Classes.Node Dequeue()
         {
             try
             {
-                Node temp = Front;
+                fifo_animal_shelter.Classes.Node temp = Front;
                 Front = Front.Next;
                 temp.Next = null;
                 return temp; 

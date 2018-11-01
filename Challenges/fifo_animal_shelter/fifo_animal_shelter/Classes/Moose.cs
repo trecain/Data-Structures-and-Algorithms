@@ -4,14 +4,9 @@ using System.Text;
 
 namespace fifo_animal_shelter.Classes
 {
-    public class Cat : Animal
+    public class Moose : Animal
     {
-        public Cat(string Name) : base(Name)
-        {
-
-        }
-
-        public Cat()
+        public Moose() : base()
         {
 
         }
