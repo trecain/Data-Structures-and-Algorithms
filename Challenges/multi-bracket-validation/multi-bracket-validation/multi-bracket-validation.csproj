@@ -6,4 +6,10 @@
     <RootNamespace>multi_bracket_validation</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="StackAndQueue">
+      <HintPath>..\..\..\Data-Structures\StackAndQueue\StackAndQueue\bin\Debug\netcoreapp2.1\StackAndQueue.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
