@@ -30,5 +30,5 @@ The console application was implemented with the use of a node class that has a 
 A binary search tree can be used for keeping data sorted in a efficient and limited time consuming manner.
 
 ## Visual
-![]()
+![](https://github.com/trecain/Data-Structures-and-Algorithms/blob/master/assets/bst.PNG)
 
