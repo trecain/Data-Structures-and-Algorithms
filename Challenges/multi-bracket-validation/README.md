@@ -14,4 +14,4 @@ Validate that a string inputs braces are balanced.
 ```
 
 ## Solution
-![Multi-Bracket Validation]()
+![Multi-Bracket Validation](https://github.com/trecain/Data-Structures-and-Algorithms/blob/master/assets/multibracket.jpg)
