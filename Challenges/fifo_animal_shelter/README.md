@@ -20,4 +20,4 @@ First-in, First out Animal Shelter.
 ```
 
 ## Solution
-![FIFO animal shelter whiteboard]()
+![FIFO animal shelter whiteboard](https://github.com/trecain/Data-Structures-and-Algorithms/blob/master/assets/fifoanimalshelter.jpg)
