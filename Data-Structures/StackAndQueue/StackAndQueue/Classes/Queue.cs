@@ -39,6 +39,11 @@ namespace StackAndQueue.Classes
         {
             Rear.Next = node;
             Rear = node;
+
+            if (Front == null)
+            {
+                Front = node;
+            }
         }
 
 

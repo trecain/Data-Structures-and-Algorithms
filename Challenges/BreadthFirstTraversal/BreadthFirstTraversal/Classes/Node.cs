@@ -9,15 +9,16 @@ namespace BreadthFirstTraversal.Classes
         /// <summary>
         /// Setting the properties for the node, left and right
         /// </summary>
-        public int Data { get; set; }
+        public Object Data { get; set; }
         public Node LeftChild { get; set; }
         public Node RightChild { get; set; }
+        public Node Next { get; set; }
 
         /// <summary>
         /// Constructor for node, sets left and right node to null
         /// </summary>
         /// <param name="value"></param>
-        public Node(int value)
+        public Node(Object value)
         {
             Data = value;
         }
