@@ -16,4 +16,10 @@
     <ProjectReference Include="..\BreadthFirstTraversal\BreadthFirstTraversal.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="Lab15-Trees">
+      <HintPath>..\..\..\Data-Structures\Lab15-Trees\Lab15-Trees\bin\Debug\netcoreapp2.1\Lab15-Trees.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
