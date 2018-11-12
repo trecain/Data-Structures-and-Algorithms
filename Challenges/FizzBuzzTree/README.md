@@ -12,4 +12,4 @@ Fizz Buzz Challenge Using Binary Trees
 ```
 
 ## Solution
-![FizzBuzzTree](https://github.com/TheNethOfMe/Data-Structures-and-Algorithms/blob/master/assets/fizzbuzztree.jpg)
+![FizzBuzzTree](https://github.com/trecain/Data-Structures-and-Algorithms/blob/master/assets/fizzbuzztree.jpg)
