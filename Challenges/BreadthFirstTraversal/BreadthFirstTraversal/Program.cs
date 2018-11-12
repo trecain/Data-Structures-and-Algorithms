@@ -6,12 +6,12 @@ using System.Collections.Generic;
 
 namespace BreadthFirstTraversal
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Console.WriteLine("Coding Challenge: Breadth First Traversal ");
-            BreadthFirst(SampleTree());
+            Console.WriteLine(BreadthFirst(SampleTree()));
         }
 
         public static BinaryTree SampleTree()
@@ -54,12 +54,12 @@ namespace BreadthFirstTraversal
         /// </summary>
         /// <param name="tree">The tree.</param>
         /// <returns></returns>
-        public static void BreadthFirst(BinaryTree tree)
+        public static string BreadthFirst(BinaryTree tree)
         {
             // use a generic que and enqueue the tree root node.
             Queue<Node> queue = new Queue<Node>();
             queue.Enqueue(tree.Root);
-
+            string result = "";
             // check to see if the queue is empty.
             while (queue.Count > 0)
             {
@@ -68,9 +68,9 @@ namespace BreadthFirstTraversal
                     continue;
                 queue.Enqueue(current.LeftChild);
                 queue.Enqueue(current.RightChild);
-
-                Console.WriteLine(current.Data);
+                result += $" {current.Data} --> ";
             }
+            return result;
         }
     }
 }
