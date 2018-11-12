@@ -10,4 +10,4 @@ Write a breadth first traversal method that takes in a binary tree and traverses
 - Space: O(n) - Space is dependant on the amount of nodes in the tree.
 
 ## Solution
-![Breadth First Traversal]()
+![Breadth First Traversal](https://github.com/trecain/Data-Structures-and-Algorithms/blob/master/assets/BreadthFirstTraversal.jpg)
