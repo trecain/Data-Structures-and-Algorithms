@@ -9,7 +9,7 @@ namespace BreadthFirstTraversal
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Coding Challenge: Breadth First Traversal");
+            Console.WriteLine("Coding Challenge: Breadth First Traversal ");
             Console.WriteLine(BreadthFirst(SampleTree()));
         }
 
