@@ -9,4 +9,4 @@ Return the first repeated word in a given string.
 - Space: O(N) Checks for repeats so times dependant on number of nodes.
 
 ## Solution
-![repeated word]()
+![repeated word picture]()
