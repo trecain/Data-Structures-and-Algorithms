@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "find_maximum_value_binary_value", "find_maximum_value_binary_value\find_maximum_value_binary_value.csproj", "{EC63338F-0241-423C-B581-65F2BA0F735B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTestProject1", "XUnitTestProject1\XUnitTestProject1.csproj", "{E81C5B42-8423-46D3-B8D3-5B6A957C37FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC63338F-0241-423C-B581-65F2BA0F735B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC63338F-0241-423C-B581-65F2BA0F735B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC63338F-0241-423C-B581-65F2BA0F735B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC63338F-0241-423C-B581-65F2BA0F735B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E81C5B42-8423-46D3-B8D3-5B6A957C37FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E81C5B42-8423-46D3-B8D3-5B6A957C37FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E81C5B42-8423-46D3-B8D3-5B6A957C37FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E81C5B42-8423-46D3-B8D3-5B6A957C37FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {04355D83-2E44-486A-8473-6ECDFB4C3937}
+	EndGlobalSection
+EndGlobal
