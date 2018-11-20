@@ -9,4 +9,4 @@ A simple sorting algorithm that builds a final sorted array one item at a time. 
 - Space: O(n2)
 
 ## Solution
-![insertion sort]()
+![insertion sort](https://github.com/trecain/Data-Structures-and-Algorithms/blob/master/assets/insertionSort.PNG)
