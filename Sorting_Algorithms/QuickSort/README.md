@@ -10,4 +10,4 @@ Time: O(nlogn)
 Space: O(1)
 
 ## Diagram
-![Quicksort Diagram]()
+![Quicksort Diagram](https://github.com/trecain/Data-Structures-and-Algorithms/blob/master/assets/quicksort_21.png)
