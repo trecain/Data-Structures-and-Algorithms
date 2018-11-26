@@ -2,7 +2,7 @@
 
 namespace QuickSort
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -11,9 +11,14 @@ namespace QuickSort
             QuickSort(myArray, 0, myArray.Length - 1);
         }
         
+        public static int[] QuickSorts(int[] arr)
+        {
+            QuickSort(arr, 0, arr.Length - 1);
+            return arr; 
+        }
 
 
-        static void QuickSort(int[] arr, int left, int right)
+        public static void QuickSort(int[] arr, int left, int right)
         {
             if (left < right)
             {
@@ -27,7 +32,7 @@ namespace QuickSort
         }
 
 
-        static int Partition(int[] arr, int left, int right)
+        public static int Partition(int[] arr, int left, int right)
         {
             // sets the pivot
             int pivot = arr[right];
@@ -48,7 +53,7 @@ namespace QuickSort
         }
 
 
-        static void Swap(int[] arr, int i, int low)
+        public static void Swap(int[] arr, int i, int low)
         {
             int temp;
             temp = arr[i];
