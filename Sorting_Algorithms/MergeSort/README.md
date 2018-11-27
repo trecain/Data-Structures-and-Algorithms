@@ -13,4 +13,4 @@ Implement a merge sort algorithm where sorted items are broken into smaller coll
 ```
 
 ## Diagram
-![MergeSort Diagram]()
+![MergeSort Diagram](https://github.com/trecain/Data-Structures-and-Algorithms/blob/master/assets/mergesort.jpg)
